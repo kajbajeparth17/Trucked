@@ -73,3 +73,4 @@ Integration (run back-end & front-end on same server/port)
 
 > [How to Integrate Angular with Spring Boot Rest API](https://bezkoder.com/integrate-angular-12-spring-boot/)# Trucked
 # Trucked
+# Trucked
