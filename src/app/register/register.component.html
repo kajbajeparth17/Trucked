@@ -1,0 +1,10 @@
+<h2>Register Your Truck</h2>
+<form (ngSubmit)="registerTruck()">
+  <label for="route">Route:</label>
+  <input type="text" id="route" [(ngModel)]="newTruck.route" name="route" required>
+
+  <label for="capacity">Capacity:</label>
+  <input type="number" id="capacity" [(ngModel)]="newTruck.capacity" name="capacity" required>
+
+  <button type="submit">Register</button>
+</form>

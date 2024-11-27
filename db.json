@@ -1,0 +1,47 @@
+{
+  "trucks": [
+    {
+      "id": "1",
+      "route": "Mumbai to Pune",
+      "capacity": 50
+    },
+    {
+      "id": "2",
+      "route": "Mumbai to Pune",
+      "capacity": 40
+    },
+    {
+      "id": "420c",
+      "route": "kuch roh",
+      "capacity": 1000
+    },
+    {
+      "id": "a6d9",
+      "route": "kuch roh",
+      "capacity": 1000
+    },
+    {
+      "id": "b3a8",
+      "route": "kuch roh",
+      "capacity": 1000
+    },
+    {
+      "id": "2a90",
+      "route": "kuch roh",
+      "capacity": 1000
+    },
+    {
+      "id": "4b73",
+      "route": "kuch roh",
+      "capacity": 1000
+    }
+  ],
+  "matches": [
+    {
+      "truckId": 1,
+      "matchedTruckId": 2,
+      "matchDetails": "50% capacity shared",
+      "id": "b2e1"
+    }
+  ]
+}
