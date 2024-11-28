@@ -7,19 +7,35 @@
       "startDate": "2024-11-29",
       "goodtype": "Food",
       "capacity": 80000
+    },
+    {
+      "id": "d033",
+      "to": "Pune",
+      "from": "Mumbai",
+      "startDate": "2024-11-28",
+      "goodtype": "Food",
+      "capacity": 50
+    },
+    {
+      "id": "f1c2",
+      "to": "Pune",
+      "from": "Mumbai",
+      "startDate": "2024-11-28",
+      "goodtype": "Food",
+      "capacity": 50
     }
   ],
   "matches": [
     {
-      "id": "mjsru9",
-      "truckId": "2",
-      "matchedTruckId": "1",
+      "id": "9kbnc6",
+      "truckId": "d033",
+      "matchedTruckId": "f89a",
       "matchDetails": "Capacity shared: 100%"
     },
     {
-      "id": "zcyr9t",
-      "truckId": "de90",
-      "matchedTruckId": "457e",
+      "id": "hsqsmx",
+      "truckId": "f1c2",
+      "matchedTruckId": "d033",
       "matchDetails": "Capacity shared: 100%"
     }
   ]

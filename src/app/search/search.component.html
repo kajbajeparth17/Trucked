@@ -1,13 +1,19 @@
 <div class="search-container">
     <h2>Search for Trucks</h2>
-    
-    <!-- Search by route -->
+  
+    <!-- Search by route and filters -->
     <div class="search-form">
       <label for="from">From:</label>
       <input type="text" id="from" [(ngModel)]="from" placeholder="Enter starting location" />
   
       <label for="to">To:</label>
       <input type="text" id="to" [(ngModel)]="to" placeholder="Enter destination" />
+  
+      <label for="startDate">Ride Date:</label>
+      <input type="date" id="startDate" [(ngModel)]="startDate" />
+  
+      <label for="goodtype">Type of Good:</label>
+      <input type="text" id="goodtype" [(ngModel)]="goodtype" placeholder="Type of good" />
   
       <label for="capacity">Min Capacity:</label>
       <input type="number" id="capacity" [(ngModel)]="capacity" placeholder="Min capacity" />
@@ -18,8 +24,10 @@
     <!-- Display filtered trucks -->
     <div *ngIf="filteredTrucks.length > 0; else noResults">
       <div *ngFor="let truck of filteredTrucks" class="truck-card">
-        <h3>{{ truck.route }}</h3>
+        <h3>{{ truck.from }} to {{ truck.to }}</h3>
         <p>Capacity: {{ truck.capacity }}</p>
+        <p>Date: {{ truck.startDate | date: 'shortDate' }}</p>
+        <p>Type of Good: {{ truck.goodtype }}</p>
       </div>
     </div>
   

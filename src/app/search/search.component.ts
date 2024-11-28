@@ -8,10 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SearchComponent implements OnInit {
   trucks: any[] = []; // All available trucks
-  filteredTrucks: any[] = []; // Filtered trucks based on search and filter criteria
+  filteredTrucks: any[] = []; // Filtered trucks based on search criteria
   from: string = ''; // From route
   to: string = ''; // To route
   capacity: number | null = null; // Filter for capacity
+  startDate: string | null = null; // Filter for date
+  goodtype: string = ''; // Filter for type of goods
 
   constructor(private http: HttpClient) {}
 
@@ -34,9 +36,13 @@ export class SearchComponent implements OnInit {
   filterTrucks(): void {
     let routeSearch = `${this.from} to ${this.to}`.trim().toLowerCase();
     this.filteredTrucks = this.trucks.filter(truck => {
-      const routeMatch = truck.route.toLowerCase().includes(routeSearch);
+      const routeMatch = truck.from.toLowerCase().includes(this.from.toLowerCase()) &&
+                         truck.to.toLowerCase().includes(this.to.toLowerCase());
       const capacityMatch = this.capacity ? truck.capacity >= this.capacity : true;
-      return routeMatch && capacityMatch;
+      const dateMatch = this.startDate ? truck.startDate === this.startDate : true;
+      const goodTypeMatch = this.goodtype ? truck.goodtype.toLowerCase().includes(this.goodtype.toLowerCase()) : true;
+
+      return routeMatch && capacityMatch && dateMatch && goodTypeMatch;
     });
   }
 }
