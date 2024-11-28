@@ -23,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
 import { MatchComponent } from './match/match.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchComponent } from './search/search.component';
+import { BookingComponent } from './booking/booking.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Home route
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'match', component: MatchComponent }, // Route match component
   { path: 'dashboard', component: DashboardComponent }, // Dashboard for logged-in users
   { path: 'search', component: SearchComponent }, 
+  { path: 'booking/:id', component: BookingComponent }, 
 ];
 
 @NgModule({

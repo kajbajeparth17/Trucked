@@ -14,6 +14,7 @@ import { MatchComponent } from './match/match.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './search/search.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SearchComponent } from './search/search.component';
     RegisterComponent,
     MatchComponent,
     DashboardComponent,
-    SearchComponent
+    SearchComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

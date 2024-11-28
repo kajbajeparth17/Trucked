@@ -1,0 +1,38 @@
+.booking-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f4f6f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-details, .fare-details {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn.primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn.primary:hover {
+    background-color: #219150;
+  }
+  
