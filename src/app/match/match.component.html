@@ -1,11 +1,13 @@
-<div class="container">
-  <h2>Matching Trucks</h2>
-  <ul class="matches">
-    <li *ngFor="let match of matches">
-      <div class="match">
-        <span>Truck {{ match.truckId }}</span> ↔ <span>Truck {{ match.matchedTruckId }}</span>
-        <p>{{ match.matchDetails }}</p>
-      </div>
-    </li>
-  </ul>
+<div class="match-container">
+  <h2>Matches</h2>
+  <div *ngIf="matches.length > 0; else noMatches">
+    <div *ngFor="let match of matches" class="match-card">
+      <h3>Match ID: {{ match.id }}</h3>
+      <p>Truck ID: {{ match.truckId }} matches with Truck ID: {{ match.matchedTruckId }}</p>
+      <p>Details: {{ match.matchDetails }}</p>
+    </div>
+  </div>
+  <ng-template #noMatches>
+    <p>No matches found.</p>
+  </ng-template>
 </div>
