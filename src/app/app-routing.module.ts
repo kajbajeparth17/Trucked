@@ -22,12 +22,14 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { MatchComponent } from './match/match.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Home route
   { path: 'register', component: RegisterComponent }, // Truck registration route
   { path: 'match', component: MatchComponent }, // Route match component
   { path: 'dashboard', component: DashboardComponent }, // Dashboard for logged-in users
+  { path: 'search', component: SearchComponent }, 
 ];
 
 @NgModule({
