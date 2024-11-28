@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,23 +10,30 @@ export class DashboardComponent implements OnInit {
   totalTrucks: number = 0; // Total number of registered trucks
   totalMatches: number = 0; // Total number of matches found
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.fetchDashboardData();
   }
 
   /**
-   * Fetches data for the dashboard (simulated with mock data here).
+   * Fetches data for the dashboard by making API calls.
    */
   fetchDashboardData(): void {
-    // Simulating API call with mock data
-    const mockData = {
-      trucks: 25,
-      matches: 12,
-    };
+    // Fetch trucks count
+    this.http.get<any[]>('http://localhost:3000/trucks').subscribe({
+      next: (trucks) => {
+        this.totalTrucks = trucks.length;
 
-    this.totalTrucks = mockData.trucks;
-    this.totalMatches = mockData.matches;
+        // Fetch matches count
+        this.http.get<any[]>('http://localhost:3000/matches').subscribe({
+          next: (matches) => {
+            this.totalMatches = matches.length;
+          },
+          error: (err) => console.error('Error fetching matches:', err),
+        });
+      },
+      error: (err) => console.error('Error fetching trucks:', err),
+    });
   }
 }
