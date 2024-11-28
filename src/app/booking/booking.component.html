@@ -1,0 +1,22 @@
+<div class="booking-container" *ngIf="truck; else loading">
+    <h2>Truck Booking</h2>
+    <div class="booking-details">
+      <h3>Truck Details</h3>
+      <p><strong>Route:</strong> {{ truck.from }} to {{ truck.to }}</p>
+      <p><strong>Capacity:</strong> {{ truck.capacity }}</p>
+      <p><strong>Date:</strong> {{ truck.startDate | date: 'shortDate' }}</p>
+      <p><strong>Type of Good:</strong> {{ truck.goodtype }}</p>
+    </div>
+  
+    <div class="fare-details">
+      <h3>Total Fare</h3>
+      <p>₹{{ bookingFare }}</p>
+    </div>
+  
+    <button (click)="confirmBooking()" class="btn primary">Confirm Booking</button>
+  </div>
+  
+  <ng-template #loading>
+    <p>Loading truck details...</p>
+  </ng-template>
+  
