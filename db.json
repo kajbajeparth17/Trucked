@@ -1,24 +1,12 @@
 {
   "trucks": [
     {
-      "id": "1",
-      "route": "Mumbai to Pune",
-      "capacity": 50
-    },
-    {
-      "id": "2",
-      "route": "Mumbai to Pune",
-      "capacity": 40
-    },
-    {
-      "id": "457e",
-      "route": "Mumbai to Delhi",
-      "capacity": 50
-    },
-    {
-      "id": "de90",
-      "route": "Mumbai to Delhi",
-      "capacity": 40
+      "id": "f89a",
+      "to": "Pune",
+      "from": "Nagpur",
+      "startDate": "2024-11-29",
+      "goodtype": "Food",
+      "capacity": 80000
     }
   ],
   "matches": [

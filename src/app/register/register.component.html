@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Register Your Truck</h2>
   <form (ngSubmit)="registerTruck()" class="form">
-    <label for="from">From:</label>
+    <label for="from">From City:</label>
     <input
       type="text"
       id="from"
@@ -10,7 +10,7 @@
       required
     />
 
-    <label for="to">To:</label>
+    <label for="to">To City:</label>
     <input
       type="text"
       id="to"
@@ -18,7 +18,23 @@
       name="to"
       required
     />
-
+    <label for="startDate">Ride Date:</label>
+    <input
+      type="date"
+      id="startDate"
+      [(ngModel)]="startDate"
+      name="startDate"
+      value="" 
+      required
+    />
+    <label for="goodtype">Type of Good:</label>
+    <input
+      type="text"
+      id="goodtype"
+      [(ngModel)]="goodtype"
+      name="goodtype"
+      required
+    />
     <label for="capacity">Capacity:</label>
     <input
       type="number"
@@ -27,7 +43,6 @@
       name="capacity"
       required
     />
-
     <button type="submit" class="btn primary">Register</button>
   </form>
 </div>
